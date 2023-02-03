@@ -13,8 +13,7 @@ export default function Karakter({ karakterler }) {
 div {
     border: 2px solid black;
     max-width: 50%;
-    margin: auto;
-    margin-top: 2rem;
+    margin: 2rem auto;
     background: rgba(0,0,0,0.2);
     font-size: 2rem;
 }
