@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-
-
-
-
-export default function Karakter({ karakterler }) {
-
-    const [display, setDisplay] = useState(true)
-
-    const ScKarakter = styled.div`
+const ScKarakter = styled.div`
 div {
     border: 2px solid black;
     max-width: 50%;
@@ -23,10 +15,14 @@ h2 {
 li {
     font-size: 1rem;
 }
-ul {
-    display: ${display && "none"};
-}
 `
+
+
+
+export default function Karakter({ karakterler }) {
+
+    const [display, setDisplay] = useState(false)
+
     return (
         <ScKarakter>
             {karakterler.map((element) => (
@@ -34,6 +30,7 @@ ul {
                     <h2>
                         {element.name}
                     </h2>
+                    { display && (
                     <ul>
                         <li>Gender: {element.gender}</li>
                         <li>Height: {element.height}</li>
@@ -43,6 +40,7 @@ ul {
                         <li>Hair Color: {element.hair_color}</li>
                         <li>Skin Color: {element.skin_color}</li>
                     </ul>
+                    )}
                 </div>
             ))}
         </ScKarakter>
