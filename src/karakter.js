@@ -30,8 +30,8 @@ ul {
 `
     return (
         <ScKarakter>
-            {karakterler.map((element, key) => (
-                <div key={key} onClick={() => setDisplay(!display)}>
+            {karakterler.map((element) => (
+                <div key={element.name} onClick={() => setDisplay(!display)}>
                     <h2>
                         {element.name}
                     </h2>
