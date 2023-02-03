@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const ScKarakter = styled.div`
+
+
+
+
+export default function Karakter({karakterler}) {
+    console.log(karakterler[0])
+    const [display, setDisplay] = useState(true)
+    const ScKarakter = styled.div`
 div {
     border: 2px solid black;
     padding: 1rem;
@@ -14,15 +21,14 @@ div {
 li {
     font-size: 1rem;
 }
+ul {
+    display: ${display && "none"};
+}
 `
-
-export default function Karakter({karakterler}) {
-    console.log(karakterler[0])
-    
 return (
     <ScKarakter>
       {karakterler.map((element,key) => (
-        <div key={key}>
+        <div display={display} onClick={() => setDisplay(!display)}>
             {element.name}
             <ul>
                 <li>Gender: {element.gender}</li>
