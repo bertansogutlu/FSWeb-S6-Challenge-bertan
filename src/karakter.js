@@ -6,8 +6,9 @@ import styled from "styled-components";
 
 
 export default function Karakter({karakterler}) {
-    console.log(karakterler[0])
+  
     const [display, setDisplay] = useState(true)
+
     const ScKarakter = styled.div`
 div {
     border: 2px solid black;
@@ -27,8 +28,8 @@ ul {
 `
 return (
     <ScKarakter>
-      {karakterler.map((element,key) => (
-        <div display={display} onClick={() => setDisplay(!display)}>
+      {karakterler.map((element, key) => (
+        <div key={key} onClick={() => setDisplay(!display)}>
             {element.name}
             <ul>
                 <li>Gender: {element.gender}</li>
