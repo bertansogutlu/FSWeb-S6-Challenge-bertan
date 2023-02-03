@@ -11,6 +11,9 @@ div {
     background: rgba(0,0,0,0.2);
     font-size: 2rem;
 }
+li {
+    font-size: 1rem;
+}
 `
 
 export default function Karakter({karakterler}) {
@@ -18,9 +21,18 @@ export default function Karakter({karakterler}) {
     
 return (
     <ScKarakter>
-      {karakterler.map(element => (
-        <div>
+      {karakterler.map((element,key) => (
+        <div key={key}>
             {element.name}
+            <ul>
+                <li>Gender: {element.gender}</li>
+                <li>Height: {element.height}</li>
+                <li>Mass: {element.mass}</li>
+                <li>Birth Year: {element.birth_year}</li>
+                <li>Eye Color: {element.eye_color}</li>
+                <li>Hair Color: {element.hair_color}</li>
+                <li>Skin Color: {element.skin_color}</li>
+            </ul>
         </div>
       ))}
     </ScKarakter>
