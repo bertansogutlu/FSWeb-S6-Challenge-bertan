@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Karakter from './karakter';
+import Arama from './arama';
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -26,6 +27,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Karakterler</h1>
+      <Arama karakterler={karakterler} setKarakterler = {setKarakterler}/>
       <Karakter karakterler={karakterler}/>
     </div>
   );
