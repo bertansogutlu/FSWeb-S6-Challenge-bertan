@@ -4,12 +4,13 @@ import axios from "axios";
 
 const ScArama = styled.div`
 input {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
     padding: 1rem;
     color: black;
     border: 0.2rem solid black;
     width: 30%;
     background: rgba(0,0,0,0.2);
-    font-size: 1rem;
     border-radius: 1rem;
     cursor: pointer;
 }

@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ScKarakter = styled.div`
 div {
     border: 0.2rem solid black;
+    font-family: 'Press Start 2P', cursive;
     text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
     max-width: 50%;
     margin: 2rem auto;
@@ -13,7 +14,6 @@ div {
     cursor: pointer;
 }
 h2 {
-    font-family: 'Press Start 2P', cursive;
     font-size: 1.5rem;
 }
 h2:hover {
@@ -21,7 +21,6 @@ h2:hover {
     scale: 1.2;
 }
 li {
-    font-family: 'Press Start 2P', cursive;
     padding: 0.5rem;
     font-size: 1rem;
     list-style-type: none;
