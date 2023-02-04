@@ -26,6 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
       <h1 className="Header">Karakterler</h1>
       <Arama karakterler={karakterler} setKarakterler = {setKarakterler}/>
       <Karakter karakterler={karakterler}/>
