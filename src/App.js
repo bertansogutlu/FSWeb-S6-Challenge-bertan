@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import Karakter from './karakter';
 import Arama from './arama';
+import Header from './header';
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -27,7 +28,8 @@ const App = () => {
   return (
     <div className="App">
       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
-      <h1 className="Header">Karakterler</h1>
+      <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"/>
+      <Header/>
       <Arama karakterler={karakterler} setKarakterler = {setKarakterler}/>
       <Karakter karakterler={karakterler}/>
     </div>
