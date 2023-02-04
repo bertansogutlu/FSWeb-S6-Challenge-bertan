@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ScKarakter = styled.div`
 div {
     border: 0.2rem solid black;
+    text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
     max-width: 50%;
     margin: 2rem auto;
     background: rgba(0,0,0,0.2);
