@@ -29,19 +29,26 @@ li {
 
 
 
+
 export default function Karakter({ karakterler }) {
 
-    const [display, setDisplay] = useState(false);
     const [selected, setSelected] = useState(null);
     
+    function toggle(index) {
+        if (index == selected) {
+            setSelected(null)
+        }
+        else {setSelected(index)}
+    }
+
     return (
         <ScKarakter>
             {karakterler.map((element, index) => (
-                <div key={index} onClick={() => {setDisplay(!display); setSelected(index)}}>
+                <div key={index} onClick={() => toggle(index)}>
                     <h2>
                         {element.name}
                     </h2>
-                    { display & ( selected === index ) ? (
+                    { index == selected && (
                     <ul>
                         <li>Gender: {element.gender}</li>
                         <li>Height: {element.height}</li>
@@ -51,7 +58,7 @@ export default function Karakter({ karakterler }) {
                         <li>Hair Color: {element.hair_color}</li>
                         <li>Skin Color: {element.skin_color}</li>
                     </ul>
-                    ) : null}
+                    )}
                 </div>
             ))}
         </ScKarakter>
