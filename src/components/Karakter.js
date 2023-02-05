@@ -30,7 +30,7 @@ li {
 
 
 
-export default function Karakter({ karakterler }) {
+export default function Karakter({karakterler}) {
 
     const [selected, setSelected] = useState(null);
     

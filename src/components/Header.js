@@ -10,10 +10,14 @@ h1 {
 }
 `
 
-export default function Header() {
+export default function Header({karakterler}) {
     return (
     <ScHeader>
+      {karakterler.length === 0 ? (
+        <h1>Loading</h1>
+      ) : (
         <h1>STAR&nbsp;&nbsp;&nbsp;WARS</h1>
+      )}
     </ScHeader>
     )
 }
