@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
-import Karakter from './karakter';
-import Arama from './arama';
-import Header from './header';
+import Karakter from './components/Karakter';
+import Arama from './components/Arama';
+import Header from './components/Header';
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
