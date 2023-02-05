@@ -13,6 +13,11 @@ input {
     border-radius: 1rem;
     cursor: pointer;
 }
+input::placeholder{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: black;
+}
 `
 
 export default function Arama({karakterler, setKarakterler, ilkKarakterler}) {
@@ -24,7 +29,7 @@ export default function Arama({karakterler, setKarakterler, ilkKarakterler}) {
 
     return (
         <ScArama>
-            <input onChange={(event => setArama(event.target.value))}/>
+            <input placeholder="Search..." onChange={(event => setArama(event.target.value))}/>
             {console.log(arama)}
         </ScArama>
     )
