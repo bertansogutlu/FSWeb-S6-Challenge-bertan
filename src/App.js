@@ -12,12 +12,14 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const [karakterler, setKarakterler] = useState([])
+  const [karakterler, setKarakterler] = useState([]);
+  const [ilkKarakterler, setIlkKarakterler] = useState([]);
 
   useEffect(() => {
     axios.get('https://swapi.dev/api/people/')
   .then(function (response) {
     setKarakterler(response.data);
+    setIlkKarakterler(response.data);
   })
   .catch(function (error) {
     // handle error
@@ -29,7 +31,7 @@ const App = () => {
     <div className="App">
       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
       <Header karakterler={karakterler}/>
-      <Arama karakterler={karakterler} setKarakterler = {setKarakterler}/>
+      <Arama karakterler={karakterler} setKarakterler = {setKarakterler} ilkKarakterler={ilkKarakterler}/>
       <Karakter karakterler={karakterler}/>
     </div>
   );
