@@ -35,7 +35,7 @@ export default function Karakter({karakterler}) {
     const [selected, setSelected] = useState(null);
     
     function toggle(index) {
-        if (index == selected) {
+        if (index === selected) {
             setSelected(null)
         }
         else {setSelected(index)}
@@ -48,7 +48,7 @@ export default function Karakter({karakterler}) {
                     <h2>
                         {element.name}
                     </h2>
-                    { index == selected && (
+                    { index === selected && (
                     <ul>
                         <li>Gender: {element.gender}</li>
                         <li>Height: {element.height}</li>
